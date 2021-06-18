@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/login.css">
+
+  <script>
+    var i = 0;
+
+    function f() {
+      var arr = ["img/roll/roll1.png", "img/roll/roll2.png", "img/roll/roll3.png", "img/roll/roll4.png"];
+      var img = document.getElementById("img");
+      i++;
+      if (i >= arr.length) {
+        i = 0;
+      }
+      img.src = arr[i];
+      var list = document.getElementById("list");
+      var li = list.getElementsByTagName("li");
+      for (var j = 0; j < li.length; j++) {
+        li[j].className = "";
+      }
+      li[i].className = "bg";
+    }
+    setInterval("f()", 1000);
+  </script>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" class="aligncenter" style="width:120px;;padding: 15px;"><br>
+    </a>
+    <hr>
+
+    <div style="align-content:center;padding-left: 38%;">
+      <form>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th colspan="3" algin="left">
+                <h2 class="font2" style="margin-top: 10px;padding: 0px;display: block;">會員密碼修改</h2><br>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="margin-top: 10px;">
+              <td class="font2" style="margin-top: 10px;padding: 0px;display: block;">原密碼</td>
+              <td colspan="3"><input type="text" class="font2" name="usedpsw" required></td>
+            </tr>
+            <tr style="margin-top: 10px;">
+              <td class="font2">新密碼</td>
+              <td colspan="3"><input type="password" class="font2" name="newpsw" required></td>
+            </tr>
+            <tr style="margin-top: 10px;">
+              <td class="font2">確認密碼</td>
+              <td colspan="3"><input type="password" class="font2" name="confirm" required></td>
+            </tr>
+
+            <br>
+
+            <tr>
+              <td><input type="hidden" /></td>
+              <td class="font2"> </td>
+            </tr>
+
+          </tbody>
+
+        </table><br>
+
+        <button type="submit" class="botton" style="margin-left: 17%;">
+          <div class="font2">&nbsp確認
+          </div>
+        </button><br><br>
+
+      </form>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

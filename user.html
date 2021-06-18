@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/user.css">
+ 
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="indexOUT.html" target="_self" class="font">賣場首頁</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="manager.html" target="_self" class="font">訂單紀錄</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="admin.html" target="_self" class="font">賣場管理</a></li>
+
+
+
+      </ul>
+    </nav>
+
+
+
+  </div>
+
+
+
+
+  <div class="content">
+    <div id="part1">
+      <div class="middle">
+        <div class="font" style="margin-left:480px;font-size: 40px;">商&nbsp品&nbsp修&nbsp改</div><br>
+        <hr>
+        <img src="img/goods/bw01.jpg" style="width: 400px;float: left;">
+        <div class="font">商品名稱：<input type="text" value="A.P.D.C.| 泡泡貓沐浴乳 (玫瑰香)"></div><br>
+        <div class="font">價格：<input type="text" value="NT$750"></div><br>
+        <div class="font">庫存：<input type="text" value="99"></div><br>
+        <div class="font">產品描述：<input type="text" style="width: 500px;height: 200px;"></div><br>
+        <div class="font">
+          <input id="btn1" type="button" onclick="fnsubmit()" value="確認修改" /></div>
+        <hr>
+
+
+
+
+        <div class=" content">
+          <div id="part2">
+
+
+            <br>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer"><br>
+        <hr style="margin-left: 200px;">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

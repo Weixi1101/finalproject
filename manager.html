@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+  <link rel="stylesheet" href="css/manager.css">
+</head>
+
+
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="indexOUT.html" target="_self" class="font">賣場首頁</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="admin.html" target="_self" class="font">賣場管理</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="user.html" target="_self" class="font">修改商品</a></li>
+
+      </ul>
+    </nav>
+
+
+    <div>
+      <br>
+      <br>
+      <br>
+      
+      <h1 class="font" style="width: 103%;">管理者登入</h1><br><br>
+      
+      <form>
+        <table id="tds" cellpadding="10" class="font">
+          <thead>
+            <tr>
+              <td>時間</td>
+              <td>購買人姓名</td>
+              <td>付款方式</td>
+              <td>地址</td>
+              <td>商品</td>
+              <td>數量</td>
+              <td>總價</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+  <hr>
+</body>
+
+</html>

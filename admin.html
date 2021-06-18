@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/admin.css">
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+
+  <style>
+   
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="indexOUT.html" target="_self" class="font">賣場首頁</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="manager.html" target="_self" class="font">訂單紀錄</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="user.html" target="_self" class="font">修改商品</a></li>
+
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <h1 class="font" style="padding-right: 100px;">管理者登入</h1>
+    <hr>
+    <div class="font"><br>
+      <form>
+        <table id="tds" cellpadding="10">
+          <thead>
+            <tr>
+              <td>序號</td>
+              <td>商品名稱</td>
+              <td>庫存</td>
+              <td>價格</td>
+              <td>調整</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. </td>
+              <td>PIDAN | 破碎混合貓砂 低塵版 (豆腐砂+礦砂)</td>
+              <td>99</td>
+              <td>$ 180</td>
+              <td> <input id="btn1" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn2" type="button" onclick="fnsubmit()" value="刪除" />
+              </td>
+            </tr>
+            <tr>
+              <td>2. </td>
+              <td>PIDAN | 原味混合貓砂 (豆腐砂+礦砂)</td>
+              <td>50</td>
+              <td>$ 200</td>
+              <td><input id="btn3" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn4" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>3. </td>
+              <td>ORIJEN | 無穀全齡貓 六種魚</td>
+              <td>101</td>
+              <td>$ 890</td>
+              <td><input id="btn5" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn6" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>4. </td>
+              <td>NUTRAM | 無穀全齡貓(火雞+雞肉)</td>
+              <td>65</td>
+              <td>$ 599</td>
+              <td><input id="btn7" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn8" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>5. </td>
+              <td>LINSLINS | 小鸚鵡貓薄荷逗貓棒</td>
+              <td>78</td>
+              <td>$ 150</td>
+              <td><input id="btn9" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn10" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>6. </td>
+              <td>PIDAN | 電動垂釣逗貓棒</td>
+              <td>90</td>
+              <td>$ 480</td>
+              <td><input id="btn11" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn12" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>7. </td>
+              <td>PIDAN|孟菲斯貓抓板 三角款</td>
+              <td>66</td>
+              <td>$ 550</td>
+              <td><input id="btn13" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn14" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>8. </td>
+              <td>VETRESKA | 起司貓抓板</td>
+              <td>97</td>
+              <td>$ 390</td>
+              <td><input id="btn15" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn16" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>9. </td>
+              <td> A.P.D.C. | 泡泡貓沐浴乳 (玫瑰香)</td>
+              <td>73</td>
+              <td>$ 750</td>
+              <td><input id="btn17" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn18" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>10. </td>
+              <td>PIDAN | 貓咪狗狗專用濕紙巾 - 10抽</td>
+              <td>89</td>
+              <td>$ 150</td>
+              <td><input id="btn19" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn20" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>11. </td>
+              <td>寵物背包</td>
+              <td>31</td>
+              <td>$ 990</td>
+              <td><input id="btn21" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn22" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>12. </td>
+              <td>PETKIT | 新風外出貓背包 (二色)</td>
+              <td>53</td>
+              <td>$ 1,590</td>
+              <td><input id="btn23" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn24" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form><br>
+      <br><br>
+      <hr>
+    </div>
+  </div>
+</body>
+
+</html>

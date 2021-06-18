@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+  <link rel="stylesheet" href="css/aboutus.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html#part1" target="_self" class="font">熱銷商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="index.html#part2" target="_self" class="font">所有商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="aboutus.html" target="_self" class="font">關於我們</a></li>
+
+      </ul>
+    </nav>
+
+
+    <div class="about-section">
+      <div class="topic">
+        <h1>我們的團隊</h1>
+        <h4>☆歡迎您進入~MIAO~的工作團隊☆</h4>
+        <br>
+        <p>希望您有在我們的網頁中搜尋到您家貓咪所喜愛及適用的相關產品~
+          <br>
+          我們很高興能協助您！
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="img/aboutus/chiuyc.jpg" width="250px" height="500px" alt="chiuyc" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>邱祐晨</h2>
+            <a href="https://www.instagram.com/chiuyc_/" target="_blank">
+              <img class="put" src="img/aboutus/instagram.png">
+            </a>
+
+            <p class="title">10844111 資管二甲</p>
+            <p class="saysth">
+              我認為在這期間，團隊的互相溝通非常重要，每一次都溝通都是增加我們的靈感，
+              發現有哪些事可以做得更加完善，不斷的精進，也在這溝通的過程中學到很多東西。從0開始設計網站，
+              前端與後端不斷的溝通進而達成一個完整的網站，我覺得是非常有成就感的一件事。
+              很謝謝夥伴的互相支持與鼓勵讓專案順利的完成！
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="img/aboutus/wru.jpg" width="250px" height="500px" alt="wru" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>陳薇如</h2>
+            <a href=" https://www.instagram.com/weiru_1009/" target="_blank">
+              <img class="put" src="img/aboutus/instagram.png">
+            </a>
+            <p class="title">10840147 資管二甲</p>
+            <p class="saysth">在這一次的合作裡我學到了很多，將網站從無到有的做出來和前端與後端的程式合併等等。
+              雖然有時候會有一點點理解想法的問題，但我們都有好好的溝通並成功解決。
+              每經過一次的開會討論，我們的網站也就越來越完整，這是件很有成就感的事情！
+              感謝夥伴們的幫助與支持！
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="img/aboutus/weixi.jpg" width="250px" height="500px" alt="Weixi" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>林濰希</h2>
+            <a href="https://www.instagram.com/weixi_1101/" target="_blank">
+              <img class="put" src="img/aboutus/instagram.png" width="30px">
+            </a>
+            <p class="title">10844239 資管二乙</p>
+            <p class="saysth">我覺得在做前端網頁跟後端真的很不一樣，
+              這學期為前端的我們，很多資料都可以從網路上來學習，
+              在程式上稍有調整也能比較容易在網頁上看得出其變化和轉換，
+              真正開始做一個網站後才發現，這真的很需要美感、排版的想法等等。
+              從無到有，真的很需要利用軟體或紙筆畫出自己的想法，這樣才能方便我們後面的網頁進行，否則沒有一個雛形真的是非常難下手，透過這次跟同學們實際運作過，
+              讓我知道一個團隊的合作，不只是要做出結果（網頁）更需要的是互相討論、互相幫忙，大家都替對方多想一點，這樣我們的專案才會有好的後續發展。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="img/aboutus/zikie.jpg" width="250px" height="500px" alt="zikie" style="width:100%">
+          <div class="container">
+            <br>
+            <h2>周金堅</h2>
+            <a href="https://www.instagram.com/zikiezhou/" target="_blank">
+              <img class="put" src="img/aboutus/instagram.png" width="30px">
+            </a>
+            <p class="title">10844270 資管二乙</p>
+            <p class="saysth">這學期的多媒體程式設計讓我收穫很多，不僅是學到了很多知識，更讓我知道了團隊合作的重要性。
+              以期末專案為例子，這麼大一個項目如果是一個人做肯定是難以完成的，只有團隊合作才能把大問題簡化。
+              而且這過程也不是一蹴而就的，其中的對接，磨合都是不可避免的，只有環節接上，通道才能疏通，項目才能進步上升。
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div><br>
+      <footer>
+        <hr><br>
+        <div class="font">MIAO ★ 版權所有<br>
+          ◎ Copyright 2021</div><br>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

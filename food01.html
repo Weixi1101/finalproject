@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/food01.css">
+
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+
+    var num_jia = document.getElementById("num-jia");
+    var num_jian = document.getElementById("num-jian");
+    var input_num = document.getElementById("input-num");
+
+    num_jia.onclick = function () {
+
+      input_num.value = parseInt(input_num.value) + 1;
+    }
+
+    num_jian.onclick = function () {
+
+      if (input_num.value <= 0) {
+        input_num.value = 0;
+      } else {
+
+        input_num.value = parseInt(input_num.value) - 1;
+      }
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:150px;margin-left: 720px;padding-bottom: 15px;padding-top: 10px;">
+    </a>
+
+
+
+    <div class="container" style="margin-top:100px;width: 2000px;">
+      <div class="group">
+        <div class="myimg">
+          <img id="myImg" src="img/goods/fd01_1.jpg" alt="ORIJEN|無穀全齡貓 (六種魚)" style="width:100%;max-width:300px">
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </div>
+
+        <div class="part1content">
+          <p>
+            <div class="font" style="font-size: 35px;">ORIJEN | 無穀全齡貓 (六種魚)<br></div>
+            <div class="font" style="font-size: 15px;">
+              ★內涵豐富蛋白質，完整滋養您的愛貓★<br>
+              ．Orijen Six Fish含40%豐富蛋白質，16%低升醣的碳水化合物<br>
+              根據貓的生理需求，適合所有品種及生長階段。<br>
+              ．Orijen 裡2/3的肉是鮮肉（冷藏、不加防腐劑）或生鮮（急速冷凍、不加防腐劑）<br>
+              是其他品牌的貓食品無法比擬的。<br>
+              <br>
+
+              ※ 成分：85%肉含量｜15%蔬菜水果<br></div>
+            <br>
+
+            <div class="font" style="font-size: 25px;">NT$890<br></div>
+            <br>
+            <div class="purchasenum mt25">
+              <div class="font">購買數量</div>
+
+              <i class="minus iconfont icon-subtract"></i>
+              <input type="number" min="1" step="1" value="1">
+              <i class="plus iconfont icon-jiahao"></i>
+            </div>
+            <div class="font">庫存數量：</div>
+            <br>
+
+            <input id="btn1" type="button" onclick="alert('已成功加入購物車！')" value="加入購物車" />
+
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br><br>
+    <div class="container">
+      <div id="parent">
+        <h2 class="saysth">商品評價</h2>
+
+        <div id="box" class="font" style="color:grey"><em>
+            <div class="font">
+              <div style="text-align: left;">方大千：
+                <br>
+                <div>
+                  4.9 <label class="star-item" for="item01" title=""></label>
+                </div>
+              </div><br>我家貓貓很愛這款~<br>
+              <div style="text-align: right;">2021-6-10</div>
+            </div>
+          </em></div>
+          <div>
+            <br>
+            <hr>
+            <textarea id="text" rows="5">
+            </textarea>
+            評分：
+            <br>
+            <div class="star">
+              <input type="radio" name="item" id="item01" checked />
+              <!--这里设置checked初始状态-->
+              <label class="star-item" for="item01" title=""></label>
+              <input type="radio" name="item" id="item02" />
+              <label class="star-item" for="item02" title=""></label>
+              <input type="radio" name="item" id="item03" />
+              <label class="star-item" for="item03" title=""></label>
+              <input type="radio" name="item" id="item04" />
+              <label class="star-item" for="item04" title=""></label>
+              <input type="radio" name="item" id="item05" />
+              <label class="star-item" for="item05" title=""></label>
+            </div>
+            <br><br>
+            <input id="btn2" type="button" onclick="fnsubmit()" value="發布" />
+          </div>
+      <br />
+    </div>
+  </div>
+    <div><br><br>
+      <footer>
+        <hr>
+        MIAO ★ 版權所有<br>
+        ◎ Copyright 2021
+      </footer>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+    </script>
+
+
+    <div class="footer">
+      <hr style="margin-left: 200px;">
+    </div>
+
+  </div>
+</body>
+
+</html>

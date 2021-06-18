@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+
+        <li><a href="#part1" class="font">熱銷商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#part2" class="font">所有商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="aboutus.html" target="_self" class="font">關於我們</a></li>
+
+      </ul>
+    </nav>
+
+    <div class="banner">
+      <div class="img-wrap">
+        <ul>
+          <li class="item" style="display: block">
+            <img src="img/roll/roll1.png" alt="" class="lunbo"> </li>
+          <li class="item">
+            <img src="img/roll/roll2.png" alt="" class="lunbo"> </li>
+          <li class="item">
+            <img src="img/roll/roll3.png" alt="" class="lunbo"> </li>
+          <li class="item">
+            <img src="img/roll/roll4.png" alt="" class="lunbo"> </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="left-promotion" id="left-promotion">
+    <div class="close-layer" style="top: 0px; right: 0px;"></div> <img src="img/goods/cg01_1.png">
+  </div>
+
+  <div class="content">
+    <div id="part1">
+      <div class="middle"><br><br><br><img src="img/logo/title.png" style="height: 80px;padding-left: 42%;"><br>
+        <hr>
+        <br>
+        <br>
+        <a href="cage01.html">
+          <img src="img/goods/cg01_1.png" title="查看商品" class="img1">
+
+        </a>
+
+        <a href="cage02.html">
+          <img src="img/goods/cg02_1.jpg" title="查看商品" class="img2">
+        </a>
+        <a href="grab02.html">
+          <img src="img/goods/gb02_1.jpg" title="查看商品" class="img3">
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <div id="part2">
+        <img src="img/logo/title2.png" style="height: 80px;padding-left: 42%;">
+
+        <hr>
+        <br>
+        <a href="bodywash01.html">
+          <img src="img/goods/bw01.jpg" title="查看商品" class="img1">
+        </a>
+        <a href="bodywash02.html">
+          <img src="img/goods/bw02_1.jpg" title="查看商品" class="img1">
+        </a>
+        <a href="cage01.html">
+          <img src="img/goods/cg01_1.png" title="查看商品" class="img1">
+        </a>
+        <a href="cage02.html">
+          <img src="img/goods/cg02_1.jpg" title="查看商品" class="img2">
+        </a>
+        <a href="food01.html">
+          <img src="img/goods/fd01_1.jpg" title="查看商品" class="img2">
+        </a>
+        <a href="food02.html">
+          <img src="img/goods/fd02_1.jpg" title="查看商品" class="img2">
+        </a>
+        <a href="grab01.html">
+          <img src="img/goods/gb01_1.jpg" title="查看商品" class="img3">
+        </a>
+        <a href="grab02.html">
+          <img src="img/goods/gb02_1.jpg" title="查看商品" class="img3">
+        </a>
+        <a href="sand01.html">
+          <img src="img/goods/sd01_1.jpg" title="查看商品" class="img3">
+        </a>
+        <a href="sand02.html">
+          <img src="img/goods/sd02_1.jpg" title="查看商品" class="img3">
+        </a>
+        <a href="toy01.html">
+          <img src="img/goods/ty01_1.jpg" title="查看商品" class="img4">
+        </a>
+        <a href="toy02.html">
+          <img src="img/goods/ty02_3.jpg" title="查看商品" class="img4">
+        </a>
+
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer"><br>
+    <hr style="margin-left: 200px;">
+  </div>
+
+
+</body>
+
+</html>
